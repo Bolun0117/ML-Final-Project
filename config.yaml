@@ -1,0 +1,67 @@
+# Project definitions (do not edit)
+Task: handposedlc
+scorer: adam
+date: Aug30
+
+# Project path (change when moving around)
+project_path: D:\Adam\HandPose20200830\handposedlc-adam-2020-08-30
+
+# Annotation data set configuration (and individual video cropping parameters)
+video_sets:
+  D:\Adam\HandPose20200830\handposedlc-adam-2020-08-30\videos\video1.avi:
+    crop: 0, 640, 0, 480
+  D:\Adam\HandPose20200830\handposedlc-adam-2020-08-30\videos\video2.avi:
+    crop: 0, 640, 0, 480
+  D:\Adam\HandPose20200830\handposedlc-adam-2020-08-30\videos\video3.avi:
+    crop: 0, 640, 0, 480
+  D:\Adam\HandPose20200830\handposedlc-adam-2020-08-30\videos\video4.avi:
+    crop: 0, 640, 0, 480
+  D:\Adam\HandPose20200830\handposedlc-adam-2020-08-30\videos\video5.avi:
+    crop: 0, 640, 0, 480
+  D:\Adam\HandPose20200830\handposedlc-adam-2020-08-30\videos\video6.avi:
+    crop: 0, 640, 0, 480
+  D:\Adam\HandPose20200830\handposedlc-adam-2020-08-30\videos\video7.avi:
+    crop: 0, 640, 0, 480
+  D:\Adam\HandPose20200830\handposedlc-adam-2020-08-30\videos\video8.avi:
+    crop: 0, 640, 0, 480
+  D:\Adam\HandPose20200830\handposedlc-adam-2020-08-30\videos\video9.avi:
+    crop: 0, 640, 0, 480
+  D:\Adam\HandPose20200830\handposedlc-adam-2020-08-30\videos\video10.avi:
+    crop: 0, 640, 0, 480
+bodyparts: [base, MCP1, PIP1, DIP1, tip1, MCP2, PIP2, DIP2, tip2, MCP3, PIP3, DIP3,
+  tip3, MCP4, PIP4, DIP4, tip4, MCP5, PIP5, DIP5, tip5]
+start: 0
+stop: 1
+numframes2pick: 40
+
+# Plotting configuration
+skeleton:
+skeleton_color: black
+pcutoff: 0.6
+dotsize: 12
+alphavalue: 0.7
+colormap: jet
+
+# Training,Evaluation and Analysis configuration
+TrainingFraction:
+- 0.95
+iteration: 0
+resnet:
+snapshotindex: -1
+batch_size: 8
+
+# Cropping Parameters (for analysis and outlier frame detection)
+cropping: false
+#if cropping is true for analysis, then set the values here:
+x1: 0
+x2: 640
+y1: 277
+y2: 624
+
+# Refinement configuration (parameters from annotation dataset configuration also relevant in this stage)
+corner2move2:
+- 50
+- 50
+move2corner: true
+default_net_type: resnet_50
+default_augmenter: default

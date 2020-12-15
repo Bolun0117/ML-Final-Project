@@ -1,0 +1,52 @@
+all_joints:
+- - 0
+- - 1
+- - 2
+- - 3
+- - 4
+- - 5
+- - 6
+- - 7
+- - 8
+- - 9
+- - 10
+- - 11
+- - 12
+- - 13
+- - 14
+- - 15
+- - 16
+- - 17
+- - 18
+- - 19
+- - 20
+all_joints_names:
+- base
+- MCP1
+- PIP1
+- DIP1
+- tip1
+- MCP2
+- PIP2
+- DIP2
+- tip2
+- MCP3
+- PIP3
+- DIP3
+- tip3
+- MCP4
+- PIP4
+- DIP4
+- tip4
+- MCP5
+- PIP5
+- DIP5
+- tip5
+dataset: training-datasets\iteration-0\UnaugmentedDataSet_handposedlcAug30\handposedlc_adam95shuffle1.mat
+global_scale: 0.8
+init_weights: d:\anaconda3\envs\deeplabcut\lib\site-packages\deeplabcut\pose_estimation_tensorflow\models\pretrained\resnet_v1_50.ckpt
+location_refinement: true
+locref_stdev: 7.2801
+net_type: resnet_50
+num_joints: 21
+scoremap_dir: test
